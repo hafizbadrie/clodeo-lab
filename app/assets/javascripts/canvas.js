@@ -3,13 +3,14 @@ $(document).ready(function() {
 });
 
 var add_image = document.getElementById("add-image");
+var remove_image = document.getElementById("remove-image");
 var clear_canvas = document.getElementById("clear-canvas");
 var paint_btn = document.getElementById("paint-mode");
 var drag_btn = document.getElementById("drag-mode");
 var erase_btn = document.getElementById("erase-mode");
 var paint_canvas = document.getElementById("paint-canvas");
 var save_canvas = document.getElementById("save-canvas");
-var imaged, paint_mode, drag_mode, erase_mode;
+var imaged, paint_mode, drag_mode, erase_mode, freeze_mode;
 var stage = new Kinetic.Stage({
 	container:"paint-canvas",
 	width:940,
@@ -21,12 +22,14 @@ var images = [];
 var img_idx = 0;
 var draw_points = [];
 var left_offset;
+var temp_group;
 
 function init_variable() {
 	imaged = false;
 	paint_mode = true;
 	drag_mode = false;
 	erase_mode = false;
+	freeze_mode = false;
 	layer = new Kinetic.Layer();
 	group = new Kinetic.Group();
 	layer.add(group);
@@ -156,7 +159,7 @@ function draw_image(image_obj) {
 	}
 
 	child_group.on('mouseover', function() {
-		if (drag_mode) {
+		if (drag_mode && !freeze_mode) {
 			var children = this.getChildren();
 			for(i=0; i<children.length; i++) {
 				if (children[i] instanceof Kinetic.Circle) {
@@ -168,7 +171,7 @@ function draw_image(image_obj) {
 	})
 
 	child_group.on('mouseout', function() {
-		if (drag_mode) {
+		if (drag_mode && !freeze_mode) {
 			var children = this.getChildren();
 			for(i=0; i<children.length; i++) {
 				if (children[i] instanceof Kinetic.Circle) {
@@ -176,6 +179,30 @@ function draw_image(image_obj) {
 				}
 			}
 			layer.draw();
+		}
+	})
+
+	child_group.on('dblclick', function() {
+		if (drag_mode) {
+			freeze_mode = !freeze_mode;
+			var children = this.getChildren();
+			if (freeze_mode) {
+				temp_group = this;
+				for(i=0; i<children.length; i++) {
+					if (children[i] instanceof Kinetic.Circle) {
+						children[i].setVisible(true);
+					}
+				}
+				layer.draw();
+			} else {
+				temp_group = undefined;
+				for(i=0; i<children.length; i++) {
+					if (children[i] instanceof Kinetic.Circle) {
+						children[i].setVisible(false);
+					}
+				}
+				layer.draw();
+			}
 		}
 	})
 
@@ -260,6 +287,14 @@ add_image.onclick = function () {
 
 	imaged = true;
 };
+
+remove_image.onclick = function() {
+	if (freeze_mode) {
+		temp_group.destroy();
+		layer.draw();
+		freeze_mode = false;
+	}
+}
 
 paint_btn.onclick = function() {
 	paint_mode = true;
