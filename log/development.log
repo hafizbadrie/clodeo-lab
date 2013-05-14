@@ -1,0 +1,3260 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/canvas" for 127.0.0.1 at 2013-05-14 16:30:19 +0700
+
+ActionController::RoutingError (No route matches [GET] "/canvas"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Jakarta_Pos_Pro/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/canvas/index" for 127.0.0.1 at 2013-05-14 16:30:34 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (0.6ms)
+Compiled bootstrap-responsive.min.css  (0ms)  (pid 8878)
+Compiled bootstrap.min.css  (0ms)  (pid 8878)
+Compiled canvas.css  (68ms)  (pid 8878)
+Compiled application.css  (125ms)  (pid 8878)
+Compiled jquery.js  (2ms)  (pid 8878)
+Compiled jquery_ujs.js  (0ms)  (pid 8878)
+Compiled bootstrap.js  (1ms)  (pid 8878)
+Compiled bootstrap.min.js  (0ms)  (pid 8878)
+Compiled canvas.js  (730ms)  (pid 8878)
+Compiled application.js  (872ms)  (pid 8878)
+Completed 200 OK in 1152ms (Views: 1152.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:30:36 +0700
+Served asset /bootstrap-responsive.min.css - 200 OK (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:30:36 +0700
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:30:36 +0700
+Served asset /bootstrap.min.css - 200 OK (1ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:30:36 +0700
+Served asset /canvas.css - 200 OK (2ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:30:36 +0700
+Served asset /canvas.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-14 16:30:36 +0700
+Served asset /bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:30:36 +0700
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:30:36 +0700
+Served asset /bootstrap.min.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:30:36 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:30:36 +0700
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-05-14 16:30:40 +0700
+Served asset /rails.png - 200 OK (28ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:31:46 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 29ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:31:47 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:31:47 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:31:47 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:31:47 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:31:47 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:31:47 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-14 16:31:47 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:31:47 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:31:47 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:31:47 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:32:39 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (0.0ms)
+Compiled application.js  (23ms)  (pid 8878)
+Completed 200 OK in 206ms (Views: 205.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:32:40 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:32:40 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:32:40 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:32:40 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:32:40 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:32:40 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:32:40 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:32:40 +0700
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:34:16 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (0.1ms)
+Compiled global.css  (2ms)  (pid 8878)
+Compiled application.css  (15ms)  (pid 8878)
+Completed 200 OK in 195ms (Views: 175.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:34:17 +0700
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:34:17 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:34:17 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:34:17 +0700
+Served asset /global.css - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.js" for 127.0.0.1 at 2013-05-14 16:34:17 +0700
+Served asset /bootstrap.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Jakarta_Pos_Pro/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:34:17 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:36:00 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 262ms (Views: 261.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:36:01 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js" for 127.0.0.1 at 2013-05-14 16:36:01 +0700
+Served asset /bootstrap.js - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Jakarta_Pos_Pro/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:36:01 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:36:01 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:36:01 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:36:01 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/img/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-14 16:36:01 +0700
+
+ActionController::RoutingError (No route matches [GET] "/img/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Jakarta_Pos_Pro/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:36:56 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 60ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:36:56 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:36:56 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:36:56 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:36:56 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js" for 127.0.0.1 at 2013-05-14 16:36:56 +0700
+Served asset /bootstrap.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Jakarta_Pos_Pro/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:36:56 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:39:56 +0700
+Processing by CanvasController#index as HTML
+Compiled kinetic.min.js  (1ms)  (pid 8878)
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (313.8ms)
+Completed 200 OK in 400ms (Views: 399.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:39:56 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:39:56 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:39:56 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:39:56 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:39:56 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js" for 127.0.0.1 at 2013-05-14 16:39:56 +0700
+Served asset /bootstrap.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Jakarta_Pos_Pro/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:39:56 +0700
+Served asset /kinetic.min.js - 200 OK (31ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:39:56 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:39:56 +0700
+Served asset /canvas.js - 200 OK (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:42:05 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (46ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (315.1ms)
+Completed 200 OK in 436ms (Views: 434.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:42:06 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:42:06 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:42:06 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:42:06 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js" for 127.0.0.1 at 2013-05-14 16:42:06 +0700
+Served asset /bootstrap.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Jakarta_Pos_Pro/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (17.6ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:42:06 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:42:06 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:42:06 +0700
+Served asset /canvas.js - 200 OK (246ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:42:06 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:43:02 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (2.8ms)
+Compiled global.css  (150ms)  (pid 8878)
+Compiled application.css  (22ms)  (pid 8878)
+Completed 200 OK in 431ms (Views: 430.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:43:02 +0700
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:43:02 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:43:02 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:43:02 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:43:02 +0700
+Served asset /global.css - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap.js" for 127.0.0.1 at 2013-05-14 16:43:02 +0700
+Served asset /bootstrap.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Jakarta_Pos_Pro/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:43:02 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:43:02 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:43:02 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:43:10 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (1.4ms)
+Compiled global.css  (3ms)  (pid 8878)
+Compiled application.css  (1ms)  (pid 8878)
+Completed 200 OK in 164ms (Views: 164.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:43:10 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:43:10 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:43:10 +0700
+Served asset /application.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:43:10 +0700
+Served asset /global.css - 200 OK (3ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:43:10 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js" for 127.0.0.1 at 2013-05-14 16:43:10 +0700
+Served asset /bootstrap.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Jakarta_Pos_Pro/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:43:10 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:43:10 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:43:10 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:43:49 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 93ms (Views: 92.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:43:50 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:43:50 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:43:50 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:43:50 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:43:50 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:43:50 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:43:50 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:43:50 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:43:50 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:44:14 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:44:14 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:44:14 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:44:14 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:44:14 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:44:14 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:44:14 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:44:14 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:44:14 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:44:14 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:44:14 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:44:14 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:44:14 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:44:43 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 128ms (Views: 127.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:44:44 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:44:44 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:44:44 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:44:44 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:44:44 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:44:44 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:44:44 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:44:44 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:44:44 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:44:44 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:44:44 +0700
+Served asset /canvas.js - 200 OK (12ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:44:44 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2013-05-14 16:44:51 +0700
+Served asset /favicon.png - 404 Not Found (104ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Jakarta_Pos_Pro/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/images/favicon.png" for 127.0.0.1 at 2013-05-14 16:44:56 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Jakarta_Pos_Pro/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/images/favicon.png" for 127.0.0.1 at 2013-05-14 16:45:01 +0700
+Served asset /images/favicon.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/favicon.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Jakarta_Pos_Pro/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2013-05-14 16:45:05 +0700
+Served asset /favicon.png - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Jakarta_Pos_Pro/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:48:08 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 56ms (Views: 55.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:48:08 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:48:08 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:48:08 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:48:08 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:48:08 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:48:08 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:48:08 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:48:08 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:48:08 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:48:08 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:48:08 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:48:43 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (2.0ms)
+Compiled global.css  (3ms)  (pid 8878)
+Compiled application.css  (2ms)  (pid 8878)
+Completed 200 OK in 385ms (Views: 385.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:48:43 +0700
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:48:43 +0700
+Served asset /global.css - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:48:43 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:48:43 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:48:43 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:48:43 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:48:43 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:48:43 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:48:43 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:48:43 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:48:43 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:48:43 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2013-05-14 16:48:56 +0700
+Served asset /favicon.png - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Jakarta_Pos_Pro/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:51:13 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 27ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:51:13 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:51:13 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:51:13 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:51:13 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:51:13 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:51:13 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:51:13 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:51:13 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:51:13 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:51:13 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:51:13 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:51:13 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2013-05-14 16:51:16 +0700
+Served asset /favicon.png - 200 OK (63ms)
+
+
+Started GET "/assets/cat-thinking.jpg" for 127.0.0.1 at 2013-05-14 16:51:18 +0700
+Served asset /cat-thinking.jpg - 200 OK (27ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:51:52 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (78.4ms)
+Completed 200 OK in 93ms (Views: 93.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:51:53 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:51:53 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:51:53 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:51:53 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:51:53 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:51:53 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:51:53 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:51:53 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:51:53 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:51:53 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:51:53 +0700
+Served asset /canvas.js - 200 OK (2ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:51:53 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:52:03 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:03 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:03 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:03 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:03 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:03 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:03 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:03 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:03 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:03 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:03 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:03 +0700
+Served asset /canvas.js - 200 OK (7ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:52:03 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:52:10 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (57ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (65.6ms)
+Completed 200 OK in 79ms (Views: 78.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:10 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:10 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:10 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:10 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:10 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:10 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:10 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:10 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:10 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:10 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:10 +0700
+Served asset /canvas.js - 200 OK (1ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:52:10 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:52:18 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 17ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:18 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:18 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:18 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:18 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:18 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:18 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:18 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:18 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:18 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:18 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:18 +0700
+Served asset /canvas.js - 200 OK (1ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:52:18 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:52:25 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:25 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:25 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:25 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:25 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:25 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:25 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:25 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:25 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:25 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:25 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:52:25 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:25 +0700
+Served asset /canvas.js - 200 OK (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:52:35 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:35 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:35 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:35 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:35 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:35 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:35 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:35 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:35 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:35 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:35 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:35 +0700
+Served asset /canvas.js - 200 OK (1ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:52:35 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:52:44 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 51ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:44 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:44 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:44 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:44 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:44 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:44 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:44 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:44 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:44 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:44 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:44 +0700
+Served asset /canvas.js - 200 OK (1ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:52:44 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:52:54 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:54 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:54 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:54 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:54 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:52:54 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:54 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:54 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:54 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:54 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:54 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:52:54 +0700
+Served asset /canvas.js - 200 OK (1ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:52:54 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:53:13 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 35ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:53:13 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:53:13 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:53:13 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:53:13 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:53:13 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:53:13 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:53:13 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:53:13 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:53:13 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:53:13 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:53:13 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:53:13 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:56:33 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:56:33 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:56:33 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:56:33 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:56:33 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:56:33 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:56:33 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:56:33 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:56:33 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:56:33 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:56:33 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:56:33 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:56:33 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:57:33 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (1.2ms)
+Compiled bootstrap.min.css  (0ms)  (pid 8878)
+Compiled application.css  (2ms)  (pid 8878)
+Completed 200 OK in 116ms (Views: 115.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:57:33 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:57:33 +0700
+Served asset /bootstrap.min.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:57:33 +0700
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:57:33 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:57:33 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:57:33 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:57:33 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:57:33 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:57:33 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:57:33 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:57:33 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/img/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-14 16:57:33 +0700
+Served asset /img/glyphicons-halflings.png - 404 Not Found (60ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/img/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Jakarta_Pos_Pro/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-14 16:57:58 +0700
+Served asset /glyphicons-halflings.png - 200 OK (47ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-14 16:58:38 +0700
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:58:41 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (2.3ms)
+Compiled bootstrap.min.css  (1ms)  (pid 8878)
+Compiled application.css  (2ms)  (pid 8878)
+Completed 200 OK in 163ms (Views: 162.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:58:42 +0700
+Served asset /application.css - 304 Not Modified (29ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:58:42 +0700
+Served asset /bootstrap.min.css - 200 OK (2ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:58:42 +0700
+Served asset /canvas.css - 200 OK (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:58:42 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:58:42 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:58:42 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:58:42 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:58:42 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:58:42 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:58:42 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:58:42 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:58:42 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-14 16:58:42 +0700
+Served asset /assets/glyphicons-halflings.png - 404 Not Found (39ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/assets/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/Jakarta_Pos_Pro/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/Jakarta_Pos_Pro/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-14 16:58:58 +0700
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-14 16:58:59 +0700
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:59:01 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:01 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:01 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:01 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:01 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:01 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:01 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:01 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:01 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:01 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:01 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:59:01 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:59:03 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 11ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:03 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:03 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:03 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:03 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:03 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:03 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:03 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:03 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:04 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:04 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:04 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:59:04 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:59:05 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:05 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:05 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:05 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:05 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:05 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:05 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:05 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:05 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:05 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:05 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:05 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:59:05 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 16:59:49 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (1.3ms)
+Compiled bootstrap.min.css  (0ms)  (pid 8878)
+Compiled application.css  (1ms)  (pid 8878)
+Completed 200 OK in 247ms (Views: 247.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:50 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:50 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:50 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:50 +0700
+Served asset /bootstrap.min.css - 200 OK (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 16:59:50 +0700
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:50 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:50 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:50 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:50 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:50 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 16:59:50 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 16:59:50 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-14 16:59:51 +0700
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:00:21 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 34ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:00:21 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:00:21 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:00:21 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:00:21 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:00:21 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:00:21 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:00:21 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:00:21 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:00:21 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:00:22 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:00:22 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:00:22 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:01:52 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:01:52 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:01:52 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:01:52 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:01:52 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:01:52 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:01:52 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:01:52 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:01:52 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:01:52 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:01:52 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:01:52 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:01:52 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:02:50 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 12ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:02:50 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:02:50 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:02:50 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:02:50 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:02:50 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:02:50 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:02:50 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:02:50 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:02:50 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:02:50 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:02:50 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:02:50 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:04:42 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:04:42 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:04:42 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:04:42 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:04:42 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:04:42 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:04:42 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:04:42 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:04:42 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:04:42 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:04:42 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:04:42 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:04:42 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:05:19 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:05:19 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:05:19 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:05:19 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:05:19 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:05:19 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:05:19 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:05:19 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:05:19 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:05:19 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:05:19 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:05:19 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:05:19 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:05:36 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:05:36 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:05:37 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:05:37 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:05:37 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:05:37 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:05:37 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:05:37 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:05:37 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:05:37 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:05:37 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:05:37 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:05:37 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:06:55 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 60ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:06:55 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:06:55 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:06:55 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:06:55 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:06:55 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:06:55 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:06:55 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:06:55 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:06:55 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:06:55 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:06:55 +0700
+Served asset /canvas.js - 200 OK (28ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:06:55 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:07:57 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 43ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:07:57 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:07:57 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:07:57 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:07:57 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:07:57 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:07:57 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:07:57 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:07:57 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:07:57 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:07:57 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:07:57 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:07:57 +0700
+Served asset /canvas.js - 200 OK (7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:09:48 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (54.9ms)
+Completed 200 OK in 65ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:09:48 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:09:48 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:09:48 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:09:48 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:09:48 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:09:48 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:09:48 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:09:48 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:09:48 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:09:48 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:09:48 +0700
+Served asset /canvas.js - 200 OK (13ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:09:48 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:10:03 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:10:03 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:10:03 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:10:03 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:10:03 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:10:03 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:10:03 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:10:03 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:10:04 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:10:04 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:10:04 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:10:04 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:10:04 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:10:12 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:10:12 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:10:12 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:10:12 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:10:12 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:10:12 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:10:12 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:10:12 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:10:12 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:10:12 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:10:12 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:10:12 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:10:12 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:12:00 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:12:00 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:12:00 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:12:00 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:12:00 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:12:00 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:12:00 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:12:00 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:12:00 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:12:00 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:12:00 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:12:00 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:12:00 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:12:55 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:12:55 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:12:55 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:12:55 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:12:55 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:12:55 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:12:55 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:12:55 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:12:55 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:12:55 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:12:55 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:12:55 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:12:55 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:13:27 +0700
+Processing by CanvasController#index as HTML
+  Rendered canvas/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 15ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:13:27 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:13:27 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:13:27 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:13:27 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:13:27 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:13:27 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:13:27 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:13:27 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:13:27 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:13:27 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:13:27 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:13:27 +0700
+Served asset /canvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:14:06 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (76.8ms)
+Completed 200 OK in 110ms (Views: 110.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:14:06 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:14:06 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:14:06 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:14:06 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:14:06 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:14:06 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:14:07 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:14:07 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:14:07 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:14:07 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:14:07 +0700
+Served asset /canvas.js - 200 OK (1ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:14:07 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:18:41 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (64.9ms)
+Completed 200 OK in 92ms (Views: 92.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:18:41 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:18:41 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:18:41 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:18:41 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:18:41 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:18:41 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:18:41 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:18:41 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:18:41 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:18:41 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:18:41 +0700
+Served asset /canvas.js - 200 OK (1ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:18:41 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:19:43 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 37ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:19:43 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:19:43 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:19:43 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:19:43 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:19:43 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:19:43 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:19:43 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:19:43 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:19:43 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:19:43 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:19:43 +0700
+Served asset /canvas.js - 200 OK (2ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:19:43 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:20:33 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (40.7ms)
+Completed 200 OK in 51ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:20:33 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:20:33 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:20:33 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:20:33 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:20:33 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:20:33 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:20:33 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:20:33 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:20:33 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:20:33 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:20:33 +0700
+Served asset /canvas.js - 200 OK (1ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:20:33 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:21:57 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:21:57 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:21:57 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:21:57 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:21:57 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:21:57 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:21:57 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:21:57 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:21:57 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:21:57 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:21:57 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:21:57 +0700
+Served asset /canvas.js - 200 OK (2ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:21:57 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:23:18 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:23:18 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:23:18 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:23:18 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:23:18 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:23:18 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:23:18 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:23:18 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:23:18 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:23:18 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:23:18 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:23:18 +0700
+Served asset /canvas.js - 200 OK (1ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:23:18 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:25:17 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (45.2ms)
+Completed 200 OK in 96ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:25:17 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:25:17 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:25:17 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:25:17 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:25:17 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:25:17 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:25:17 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:25:17 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:25:17 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:25:17 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:25:17 +0700
+Served asset /canvas.js - 200 OK (2ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:25:17 +0700
+Served asset /canvas.js - 200 OK (0ms)
+
+
+Started GET "/assets/idoh.jpeg" for 127.0.0.1 at 2013-05-14 17:25:23 +0700
+Served asset /idoh.jpeg - 200 OK (42ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-14 17:26:00 +0700
+Processing by CanvasController#index as HTML
+Compiled canvas.js  (0ms)  (pid 8878)
+  Rendered canvas/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 70ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-14 17:26:00 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:26:00 +0700
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-14 17:26:00 +0700
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.css?body=1" for 127.0.0.1 at 2013-05-14 17:26:00 +0700
+Served asset /canvas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-05-14 17:26:00 +0700
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-14 17:26:00 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-14 17:26:00 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-14 17:26:00 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:26:00 +0700
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic.min.js?body=1" for 127.0.0.1 at 2013-05-14 17:26:00 +0700
+Served asset /kinetic.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/canvas.js?body=1" for 127.0.0.1 at 2013-05-14 17:26:00 +0700
+Served asset /canvas.js - 200 OK (2ms)
+
+
+Started GET "/assets/canvas.js" for 127.0.0.1 at 2013-05-14 17:26:00 +0700
+Served asset /canvas.js - 200 OK (0ms)

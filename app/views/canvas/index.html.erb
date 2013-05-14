@@ -1,0 +1,24 @@
+<% content_for :jscript do %>
+	<%= javascript_include_tag "kinetic.min", "canvas" %>
+	<script type="defer" src="/assets/canvas.js"></script>
+<% end %>
+
+<div class="row">
+	<div id="paint-canvas" class="span12">
+	</div>
+</div>
+
+<div class="space"></div>
+
+<div class="row">
+	<div class="span2" data-toggle="buttons-radio">		
+		<button id="paint-mode" class="btn btn-small" data-toggle="button"><i class="icon-pencil" title="Paint Mode"></i></button>
+		<button id="drag-mode" class="btn btn-small" data-toggle="button"><i class="icon-move" title="Drag Mode"></i></button>
+		<button id="erase-mode" class="btn btn-small" data-toggle="button"><i class="icon-ban-circle" title="Erase Mode"></i></button>
+	</div>
+	<div class="span2">
+		<button id="add-image" class="btn btn-small"><i class="icon-file" title="Add New Image"></i></button>
+		<button id="clear-canvas" class="btn btn-small"><i class="icon-refresh" title="Clear Canvas"></i></button>
+		<button id="save-canvas" class="btn btn-small"><i class="icon-download-alt" title="Save as Image"></i></button>
+	</div>
+</div>
