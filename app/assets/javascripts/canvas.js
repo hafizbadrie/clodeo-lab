@@ -10,6 +10,8 @@ var drag_btn = document.getElementById("drag-mode");
 var erase_btn = document.getElementById("erase-mode");
 var paint_canvas = document.getElementById("paint-canvas");
 var save_canvas = document.getElementById("save-canvas");
+var record_canvas = document.getElementById("record-canvas");
+var load_canvas = document.getElementById("load-canvas");
 var imaged, paint_mode, drag_mode, erase_mode, freeze_mode;
 var stage = new Kinetic.Stage({
 	container:"paint-canvas",
@@ -23,6 +25,9 @@ var img_idx = 0;
 var draw_points = [];
 var left_offset;
 var temp_group;
+var memcard;
+var activities = new Array();
+var points = new Array();
 
 function init_variable() {
 	imaged = false;
@@ -244,6 +249,9 @@ document.onmousedown = function(e) {
 				});
 			}
 			groups[0].add(red_line);
+
+			/* save activity */
+			points.push({x:e.pageX-left_offset, y:e.pageY-50});
 		}
 	}
 }
@@ -255,11 +263,15 @@ document.onmousemove = function(e) {
 			left_offset = document.getElementsByClassName('container')[0].offsetLeft;
 			draw_points.push(e.pageX-left_offset);
 			draw_points.push(e.pageY-50);
+
 			var layers = stage.getChildren();
 			var groups = layers[0].getChildren();
 			var red_lines = groups[0].getChildren();
 			red_lines[red_lines.length - 1].setPoints(draw_points);
 			stage.draw();
+
+			/* save activity */
+			points.push({x:e.pageX-left_offset, y:e.pageY-50});
 		}
 	}
 }
@@ -269,6 +281,16 @@ document.onmouseup = function(e) {
 	if (elm.nodeName == "CANVAS") {
 		if (paint_mode || erase_mode) {
 			is_painting = false;
+
+			/* save activity */
+			var savecard = {
+				activity:"paint",
+				points:points,
+				color:"red",
+				width:5
+			}
+			activities.push(savecard);
+			points = [];
 		}
 	}
 }
@@ -356,3 +378,34 @@ save_canvas.onclick = function() {
 
 	return false;
 };
+
+record_canvas.onclick = function() {
+	memcard = JSON.stringify(activities);
+}
+
+load_canvas.onclick = function() {
+	if (memcard != undefined) {
+		activities = JSON.parse(memcard);
+		clear_canvas.onclick();
+
+		for(i=0; i<activities.length; i++) {
+			var activity = activities[i];
+
+			if (activity.activity == "paint") {
+				var red_line = new Kinetic.Line({
+					points:activity.points,
+					stroke: activity.color,
+					strokeWidth: activity.width,
+					lineCap: 'round',
+					lineJoin: 'round'
+				});
+
+				var layers = stage.getChildren();
+				var groups = layers[0].getChildren();
+				groups[0].add(red_line);
+			}
+		}
+
+		layer.draw();
+	}
+}
