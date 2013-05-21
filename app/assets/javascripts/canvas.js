@@ -30,6 +30,7 @@ $(document).ready(function() {
 	var memcard;
 	var activities = new Array();
 	var points = new Array();
+	var line_name;
 
 	function init_variable() {
 		imaged = false;
@@ -61,7 +62,6 @@ $(document).ready(function() {
 		var anchorY = activeAnchor.getY();
 
 		// update anchor positions
-		console.log(activeAnchor.getName());
 		switch (activeAnchor.getName()) {
 			case 'top_left':
 				topRight.setY(anchorY);
@@ -108,7 +108,6 @@ $(document).ready(function() {
 	    });
 
 	    anchor.on('dragmove', function() {
-	    	console.log('dragmove');
 			resize(this);
 			layer.draw();
 	    });
@@ -242,19 +241,21 @@ $(document).ready(function() {
 						lineJoin: 'round'
 					});
 				} else {
+					line_name = "line_" + Date.now();
 					var red_line = new Kinetic.Line({
 						points:draw_points,
 						stroke: 'red',
 						strokeWidth: 5,
 						lineCap: 'round',
-						lineJoin: 'round'
+						lineJoin: 'round',
+						name: line_name
 					});
 				}
 				groups[0].add(red_line);
 
 				/* save activity */
 				points.push({x:e.pageX-left_offset, y:e.pageY-50});
-				sockjs.send(JSON.stringify({x:e.pageX-left_offset, y:e.pageY-50, type:"paint"}));
+				sockjs.send(JSON.stringify({name:line_name, x:e.pageX-left_offset, y:e.pageY-50, type:"paint"}));
 			}
 		}
 	}
@@ -275,7 +276,7 @@ $(document).ready(function() {
 
 				/* save activity */
 				points.push({x:e.pageX-left_offset, y:e.pageY-50});
-				sockjs.send(JSON.stringify({x:e.pageX-left_offset, y:e.pageY-50, type:"paint"}));
+				sockjs.send(JSON.stringify({name:line_name, x:e.pageX-left_offset, y:e.pageY-50, type:"paint"}));
 			}
 		}
 	}
@@ -304,6 +305,7 @@ $(document).ready(function() {
 				}
 				activities.push(savecard);
 				points = [];
+				line_name = "";
 			}
 		}
 	}
@@ -378,7 +380,6 @@ $(document).ready(function() {
 	save_canvas.onclick = function() {
 		stage.toDataURL({
 			callback:function(data_uri) {
-				console.log(data_uri);
 				window.open(data_uri);
 				/**
 				 * 1. Send data_uri to server
@@ -423,13 +424,46 @@ $(document).ready(function() {
 			layer.draw();
 		}
 	}
+
+	sockjs.onopen = function() {
+		console.log("SockJS connected!");
+	}
+
+	sockjs.onmessage = function(e) {
+		var obj = JSON.parse(e.data);
+		var message = JSON.parse(obj.text);
+		var layers = stage.getChildren();
+		var groups = layers[0].getChildren();
+		var children = groups[0].getChildren();
+		var found = false;
+		var idx = 0;
+
+		while (!found && idx < children.length) {
+			if (children[idx].getName() == message.name) {
+				found = true;
+			} else {
+				idx++;
+			}
+		}
+
+		if (!found) {
+			draw_points = [message.x, message.y];
+			var line = new Kinetic.Line({
+				points:draw_points,
+				stroke: 'red',
+				strokeWidth: 5,
+				lineCap: 'round',
+				lineJoin: 'round',
+				name:message.name
+			});
+
+			groups[0].add(line);
+		} else {
+			var line = children[idx];
+			draw_points.push(message.x);
+			draw_points.push(message.y);
+			line.setPoints(draw_points);
+			stage.draw();
+		}
+	}
 });
-
-sockjs.onopen = function() {
-	console.log("SockJS connected!");
-}
-
-sockjs.onmessage = function(e) {
-	var obj = JSON.parse(e.data);
-	console.log(e.data);
-}
