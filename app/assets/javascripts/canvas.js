@@ -380,12 +380,33 @@ $(document).ready(function() {
 	save_canvas.onclick = function() {
 		stage.toDataURL({
 			callback:function(data_uri) {
-				window.open(data_uri);
-				/**
-				 * 1. Send data_uri to server
-				 * 2. Server save the data into file as .png
-				 * 3. Give callback
-				 */
+				//window.open(data_uri);
+
+				console.log(data_uri);
+				$.ajax({
+					type:"POST",
+					url:"/canvas/base64image",
+					dataType:"json",
+					data:{
+						uri_data:data_uri
+					},
+					success:function(response) {
+						if (response.status == "success") {
+							var form = document.createElement("form");
+							var field = document.createElement("input");
+							form.setAttribute("method", "post");
+							form.setAttribute("action", "/canvas/getimage");
+							field.setAttribute("type", "hidden");
+							field.setAttribute("name", "filename");
+							field.setAttribute("value", response.filename);
+							form.appendChild(field);
+							document.body.appendChild(form);
+							form.submit();
+						} else {
+							alert("Oops! There's something wrong with our system.")
+						}
+					}
+				});
 			},
 			mimeType:'image/png',
 			quality:0.5
