@@ -1,0 +1,8 @@
+{
+        "name": "todo",
+        "version": "0.0.0",
+        "dependencies": {
+                "express": "~3*",
+                "sockjs": "*"
+        }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>Clodeo - Quick</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Clodeo mini">
+	<meta name="author" content="Hafiz Badrie Lubis">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="navbar-inner">
+	    <div class="container">
+	      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="brand" href="#">Clodeo - Quick</a>
+	    </div>
+    </div>
+  </div>
+
+	<div class="container">
+		<div class="row">
+			<div class="span5 offset3">
+				<ul class="nav nav-tabs">
+			    	<li class="active"><a href="#">Todo List</a></li>
+				    <li><a href="#">Completed Todo</a></li>
+				    <li><a href="#">Manage Todos</a></li>
+			    </ul>
+			</div>
+
+			<!-- CONTENT : start -->
+			<div class="span5 offset3 todolist" ng-controller="todolist_controller">
+				<label class="checkbox" ng-repeat="todo in todos">
+					<input type="checkbox" ng-model="todo.done" ng-change="show_close_button()"> 
+					<span class="todo-{{todo.done}}">{{todo.text}}</span>
+				</label>
+
+				<!--
+				<label class="checkbox">
+					<input type="checkbox"> This is one first todo need to be done
+				</label>
+				<label class="checkbox">
+					<input type="checkbox"> This is one second todo need to be done
+				</label>
+				<label class="checkbox">
+					<input type="checkbox"> This is one third todo need to be done
+				</label>
+				-->
+
+				<div class="row close-row">
+					<div class="span5">
+						<button class="btn btn-success" id="btn-close">
+							<i class="icon-plus icon-white"></i>
+							Add Images
+						</button>
+
+						<ul class="todo-images">
+							<li class="row">
+								<div class="span2">
+									<img class="media-object" src="holder.js/150x150">
+								</div>
+								<div class="span3">
+									<div>File name : todo-picture.jpg</div>
+									<textarea placeholder="Insert caption here" class="span3"></textarea>
+								</div>
+							</li>
+							<li class="row">
+								<div class="span5">
+									Uploading todo-picture-1.jpg ...
+								    <div class="progress progress-striped active">
+								    	<div class="bar" style="width: 80%;"></div>
+								    </div>
+								</div>
+							</li>
+							<li class="row">
+								<div class="span5">
+									Uploading todo-picture-2.jpg ...
+								    <div class="progress progress-striped active">
+								    	<div class="bar" style="width: 30%;"></div>
+								    </div>
+								</div>
+							</li>
+						</ul>
+					</span>
+				</div>
+			</div>
+			<!-- CONTENT : end -->
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+	<script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/vendor/angular.min.js"></script>
+	<script type="text/javascript" src="js/vendor/holder.js"></script>
+	<script type="text/javascript" src="js/app/controller.js"></script>
+</body>	
+</html>

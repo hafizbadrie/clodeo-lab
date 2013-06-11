@@ -1,0 +1,18 @@
+body{margin:0;padding:60px 0;background-color:#ffffff;}
+
+.login-box{background-color:#ffffff;padding:10px;box-shadow:2px 2px 3px #888888;-webkit-box-shadow:2px 2px 3px #888888;-o-box-shadow:2px 2px 3px #888888;-moz-box-shadow:2px 2px 3px #888888;border-radius:5px 5px 5px 5px;-webkit-border-radius:5px 5px 5px 5px;-moz-border-radius:5px 5px 5px 5px;-o-border-radius:5px 5px 5px 5px;}
+.login-box .a-signup{line-height:30px;}
+.todolist .add-todo{margin:0;}
+.todolist input[type="text"]{font-size:20px;height:25px;margin-bottom:20px;}
+.todolist .checkbox{font-size:20px;margin-bottom:10px;}
+.todolist .checkbox .todo-true{text-decoration:line-through;color:#808080;font-style:italic;}
+.todolist .close-row{margin-top:30px;}
+.todolist .todo-images{list-style:none;padding:0;margin:10px 0 0 0;}
+.todolist .todo-images .progress{margin-bottom:5px;}
+.todolist .todo-images li{margin-bottom:10px;}
+.todolist .todo-images li .span3{margin-left:5px;}
+.todolist .todo-images li .span3 div{margin-bottom:5px;}
+.todolist .todo-images li .span3 textarea{margin-left:0;height:75px;}
+
+div.checkbox{padding:0;}
+i.icon-ok{margin:5px 5px 0 0;}
