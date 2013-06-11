@@ -15,6 +15,7 @@ $(document).ready(function() {
 	var save_canvas = document.getElementById("save-canvas");
 	var record_canvas = document.getElementById("record-canvas");
 	var load_canvas = document.getElementById("load-canvas");
+	var send_message= document.getElementById("send-message");
 	var imaged, paint_mode, drag_mode, erase_mode, freeze_mode;
 	var stage = new Kinetic.Stage({
 		container:"paint-canvas",
@@ -439,6 +440,35 @@ $(document).ready(function() {
 		return false;
 	};
 
+	var print_message = function(fullname, message) {
+		var row_div = document.createElement("div");
+		var span7_div = document.createElement("div");
+		var space_div = document.createElement("div");
+		row_div.setAttribute("class", "row");
+		span7_div.setAttribute("class", "span7 chatbox");
+		span7_div.innerHTML = "<strong>" + fullname + ":</strong> " + message;
+		row_div.appendChild(span7_div);
+		space_div.setAttribute("class", "space");
+		document.getElementById("message-board").appendChild(row_div);
+		document.getElementById("message-board").appendChild(space_div);
+
+		document.getElementById("chat-message").value = "";
+	}
+
+	send_message.onclick = function() {
+		var fullname = document.getElementById("chat-username").value;
+		var message = document.getElementById("chat-message").value;
+		
+		if (message != "") {
+			if (fullname == "") {
+				fullname = "Anonymous";
+			}
+
+			print_message(fullname, message);
+			sockjs.send(JSON.stringify({fullname:fullname, message:message, type:"chat"}));
+		}
+	}
+
 	record_canvas.onclick = function() {
 		memcard = JSON.stringify(activities);
 	}
@@ -482,39 +512,47 @@ $(document).ready(function() {
 			connid = obj.id;
 		} else if (obj.status == "data") {
 			var message = JSON.parse(obj.text);
-			var layers = stage.getChildren();
-			var groups = layers[0].getChildren();
-			var children = groups[0].getChildren();
-			var found = false;
-			var idx = 0;
-			var people_points = [];
 
-			while (!found && idx < children.length) {
-				if (children[idx].getName() == message.name) {
-					found = true;
-				} else {
-					idx++;
+			if (message.type == "paint") {
+				var layers = stage.getChildren();
+				var groups = layers[0].getChildren();
+				var children = groups[0].getChildren();
+				var found = false;
+				var idx = 0;
+				var people_points = [];
+
+				while (!found && idx < children.length) {
+					if (children[idx].getName() == message.name) {
+						found = true;
+					} else {
+						idx++;
+					}
 				}
-			}
 
-			if (!found) {
-				people_points = [message.x, message.y];
-				var line = new Kinetic.Line({
-					points:people_points,
-					stroke: 'red',
-					strokeWidth: 5,
-					lineCap: 'round',
-					lineJoin: 'round',
-					name:message.name
-				});
+				if (!found) {
+					people_points = [message.x, message.y];
+					var line = new Kinetic.Line({
+						points:people_points,
+						stroke: 'red',
+						strokeWidth: 5,
+						lineCap: 'round',
+						lineJoin: 'round',
+						name:message.name
+					});
 
-				groups[0].add(line);
-			} else {
-				var line = children[idx];
-				people_points = line.getPoints();
-				people_points.push({x:message.x, y:message.y});
-				line.setPoints(people_points);
-				stage.draw();
+					groups[0].add(line);
+				} else {
+					var line = children[idx];
+					people_points = line.getPoints();
+					people_points.push({x:message.x, y:message.y});
+					line.setPoints(people_points);
+					stage.draw();
+				}
+			} else if (message.type == "chat") {
+				var fullname = message.fullname;
+				var message = message.message;
+
+				print_message(fullname, message);
 			}
 		}
 	}

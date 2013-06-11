@@ -15,16 +15,51 @@
 		<button id="drag-mode" class="btn btn-small" data-toggle="button"><i class="icon-move" title="Drag Mode"></i></button>
 		<button id="erase-mode" class="btn btn-small" data-toggle="button"><i class="icon-ban-circle" title="Erase Mode"></i></button>
 	</div>
-	<div class="span4">
+	<div class="span5">
 		<button id="add-image" class="btn btn-small"><i class="icon-file" title="Add New Image"></i></button>
 		<button id="remove-image" class="btn btn-small"><i class="icon-remove" title="Remove Image"></i></button>
 		<button id="clear-canvas" class="btn btn-small"><i class="icon-refresh" title="Clear Canvas"></i></button>
 		<button id="save-canvas" class="btn btn-small"><i class="icon-download-alt" title="Save as Image"></i></button>
+		<a id="chat-button" role="button" data-toggle="modal" href="#chat-board" class="btn btn-small"><i class="icon-comment" title="Chat Board"></i></a>
 		<button id="record-canvas" class="btn btn-small">Save</button>
 		<button id="load-canvas" class="btn btn-small">Load</button>
+
+		<!-- CHAT BOARD -->
+		<div id="chat-board" class="modal hide fade" tabindex="-1" role="dialog" aria-lablledby="chat-board-label" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3 id="chat-board-label">Chat Board</h3>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="span7 chatbox message-board" id="message-board">
+						
+					</div>
+				</div>
+				<div class="space"></div>
+				<div class="space"></div>
+				<div class="row">
+					<div class="span7">
+						<input type="text" class="span3" placeholder="Your name" id="chat-username" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="span7">
+						<textarea rows="3" class="chatbox" placeholder="Type your message here..." id="chat-message"></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<button id="send-message" class="btn btn-small btn-primary pull-right">Send</button>
+				</div>
+			</div>
+		</div>
+		<!-- -->
+
 	</div>
 	<div class="span3 pull-right">
 		<a id="how-to" role="button" data-toggle="modal" href="#how-to-description" class="btn btn-small pull-right">How To Operate This?</a>
+		
+		<!-- HOW TO -->
 		<div id="how-to-description" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="how-to-label" aria-hidden="true">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -62,10 +97,15 @@
 				<h4>Download Image</h4>
 				<p>Click a button which has this icon: <i class="icon-download-alt"></i> and it will show a pop up. After that, you can save the image.</p>
 				<p>&nbsp;</p>
+
+				<h4>Chatting</h4>
+				<p>Click a button which has this icon: <i class="icon-comment"></i> and it will show a pop up. After that, you can chat to everyone.</p>
+				<p>&nbsp;</p>
 			</div>
 			<div class="modal-footer">
 				<button class="btn btn-small" data-dismiss="modal" aria-hidden="true">Close</button>
 			</div>
 		</div>
+		<!-- -->
 	</div>
 </div>
