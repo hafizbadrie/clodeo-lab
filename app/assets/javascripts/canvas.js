@@ -1,5 +1,6 @@
-var url = "http://localhost:3001/sock";
+var url = "http://192.168.1.104:3001/sock";
 var sockjs = new SockJS(url);
+var connid = "";
 
 $(document).ready(function() {
 	$("#paint-mode").button("toggle");
@@ -31,6 +32,7 @@ $(document).ready(function() {
 	var activities = new Array();
 	var points = new Array();
 	var line_name;
+	var line_stack_pos = -1;
 
 	function init_variable() {
 		imaged = false;
@@ -222,7 +224,7 @@ $(document).ready(function() {
 	init_variable();
 	init();
 
-	document.onmousedown = function(e) {
+	var paint_start = function(e) {
 		var elm = e.target;
 		if (elm.nodeName == "CANVAS") {
 			if (paint_mode || erase_mode) {
@@ -241,7 +243,7 @@ $(document).ready(function() {
 						lineJoin: 'round'
 					});
 				} else {
-					line_name = "line_" + Date.now();
+					line_name = "line_" + connid + "_" + Date.now();
 					var red_line = new Kinetic.Line({
 						points:draw_points,
 						stroke: 'red',
@@ -252,6 +254,8 @@ $(document).ready(function() {
 					});
 				}
 				groups[0].add(red_line);
+				var group_children = groups[0].getChildren();
+				line_stack_pos = group_children.length - 1;
 
 				/* save activity */
 				points.push({x:e.pageX-left_offset, y:e.pageY-50});
@@ -260,7 +264,7 @@ $(document).ready(function() {
 		}
 	}
 
-	document.onmousemove = function(e) {
+	var painting = function(e) {
 		var elm = e.target;
 		if (elm.nodeName == "CANVAS") {
 			if (is_painting && (paint_mode || erase_mode)) {
@@ -271,7 +275,7 @@ $(document).ready(function() {
 				var layers = stage.getChildren();
 				var groups = layers[0].getChildren();
 				var red_lines = groups[0].getChildren();
-				red_lines[red_lines.length - 1].setPoints(draw_points);
+				red_lines[line_stack_pos].setPoints(draw_points);
 				stage.draw();
 
 				/* save activity */
@@ -281,7 +285,7 @@ $(document).ready(function() {
 		}
 	}
 
-	document.onmouseup = function(e) {
+	var paint_stop = function(e) {
 		var elm = e.target;
 		if (elm.nodeName == "CANVAS") {
 			if (paint_mode || erase_mode) {
@@ -306,8 +310,28 @@ $(document).ready(function() {
 				activities.push(savecard);
 				points = [];
 				line_name = "";
+				line_stack_pos = -1;
 			}
 		}
+	}
+
+	document.ontouchstart = function(e) {
+		paint_start(e);
+	};
+	document.onmousedown = function(e) {
+		paint_start(e);
+	};
+	document.ontouchmove = function(e) {
+		painting(e);
+	}
+	document.onmousemove = function(e) {
+		painting(e);
+	}
+	document.ontouchend = function(e) {
+		paint_stop(e);		
+	}
+	document.onmouseup = function(e) {
+		paint_stop(e);
 	}
 
 	add_image.onclick = function () {
@@ -446,45 +470,52 @@ $(document).ready(function() {
 		}
 	}
 
-	sockjs.onopen = function() {
-		console.log("SockJS connected!");
+	sockjs.onopen = function(e) {
+		
 	}
 
 	sockjs.onmessage = function(e) {
 		var obj = JSON.parse(e.data);
-		var message = JSON.parse(obj.text);
-		var layers = stage.getChildren();
-		var groups = layers[0].getChildren();
-		var children = groups[0].getChildren();
-		var found = false;
-		var idx = 0;
 
-		while (!found && idx < children.length) {
-			if (children[idx].getName() == message.name) {
-				found = true;
-			} else {
-				idx++;
+		if (obj.status == "connect") {
+			console.log(obj.id);
+			connid = obj.id;
+		} else if (obj.status == "data") {
+			var message = JSON.parse(obj.text);
+			var layers = stage.getChildren();
+			var groups = layers[0].getChildren();
+			var children = groups[0].getChildren();
+			var found = false;
+			var idx = 0;
+			var people_points = [];
+
+			while (!found && idx < children.length) {
+				if (children[idx].getName() == message.name) {
+					found = true;
+				} else {
+					idx++;
+				}
 			}
-		}
 
-		if (!found) {
-			draw_points = [message.x, message.y];
-			var line = new Kinetic.Line({
-				points:draw_points,
-				stroke: 'red',
-				strokeWidth: 5,
-				lineCap: 'round',
-				lineJoin: 'round',
-				name:message.name
-			});
+			if (!found) {
+				people_points = [message.x, message.y];
+				var line = new Kinetic.Line({
+					points:people_points,
+					stroke: 'red',
+					strokeWidth: 5,
+					lineCap: 'round',
+					lineJoin: 'round',
+					name:message.name
+				});
 
-			groups[0].add(line);
-		} else {
-			var line = children[idx];
-			draw_points.push(message.x);
-			draw_points.push(message.y);
-			line.setPoints(draw_points);
-			stage.draw();
+				groups[0].add(line);
+			} else {
+				var line = children[idx];
+				people_points = line.getPoints();
+				people_points.push({x:message.x, y:message.y});
+				line.setPoints(people_points);
+				stage.draw();
+			}
 		}
 	}
 });
