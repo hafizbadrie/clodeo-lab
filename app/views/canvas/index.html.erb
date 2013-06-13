@@ -1,5 +1,5 @@
 <% content_for :jscript do %>
-	<%= javascript_include_tag "sockjs.min", "kinetic.min", "canvas" %>
+	<%= javascript_include_tag "vendor/sockjs.min", "vendor/kinetic.min", "vendor/jquery.ui.widget", "vendor/jquery.iframe-transport", "vendor/jquery.fileupload", "canvas" %>
 <% end %>
 
 <div class="row">
@@ -16,7 +16,11 @@
 		<button id="erase-mode" class="btn btn-small" data-toggle="button"><i class="icon-ban-circle" title="Erase Mode"></i></button>
 	</div>
 	<div class="span5">
-		<button id="add-image" class="btn btn-small"><i class="icon-file" title="Add New Image"></i></button>
+		<!--<button id="add-image" class="btn btn-small"><i class="icon-file" title="Add New Image"></i></button>-->
+		<span id="upload-image" class="btn btn-small fileinput-button">
+			<i class="icon-file" title="Upload an Image"></i>
+			<input id="fileuploader" type="file" name="file">
+		</span>
 		<button id="remove-image" class="btn btn-small"><i class="icon-remove" title="Remove Image"></i></button>
 		<button id="clear-canvas" class="btn btn-small"><i class="icon-refresh" title="Clear Canvas"></i></button>
 		<button id="save-canvas" class="btn btn-small"><i class="icon-download-alt" title="Save as Image"></i></button>

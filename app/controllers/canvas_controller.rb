@@ -1,5 +1,40 @@
+require 'mime-types'
+
 class CanvasController < ApplicationController
   def index
+  end
+
+  def upload
+    mime_types = MIME::Types.type_for(params[:file].original_filename)
+    retval = Hash.new
+
+    if mime_types.size == 0
+      retval[:status] = "fail"
+      retval[:message] = "Your file can not be identified."
+    else
+      mime_type = mime_types[0]
+      if mime_type == "image/png" or mime_type == "image/jpg" or mime_type == "image/jpeg" or mime_type == "image/gif" 
+        orifile = File.basename(params[:file].original_filename)
+        extension = File.extname(orifile)
+        filename = Digest::MD5.hexdigest(orifile + Time.now.to_s) + extension
+        directory = Rails.root + "public/uploads"
+        path = File.join(directory, filename)
+        File.open(path, "wb") do |f|
+          f.write(params[:file].read)
+        end
+
+        #return json with status and file path
+        retval[:status] = "success"
+        retval[:filepath] = "/uploads/" + filename
+        #retval[:width] = 90
+        #retval[:height] = 90
+      else
+        retval[:status] = "fail"
+        retval[:message] = "Your file type is not supported."
+      end
+    end
+
+    render json: retval
   end
 
   def base64image

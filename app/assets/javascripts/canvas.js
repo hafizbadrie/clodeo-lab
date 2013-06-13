@@ -2,7 +2,7 @@ var url = "http://192.168.1.104:3001/sock";
 var sockjs = new SockJS(url);
 var connid = "";
 
-$(document).ready(function() {
+$(function() {
 	$("#paint-mode").button("toggle");
 
 	var add_image = document.getElementById("add-image");
@@ -155,17 +155,10 @@ $(document).ready(function() {
 		});
 		child_group.add(image);
 
-		if (img_idx == 0) {
-			add_anchor(child_group, 10, 10, 'top_left');
-			add_anchor(child_group, 448, 10, 'top_right');
-			add_anchor(child_group, 10, 448, 'bottom_left');
-			add_anchor(child_group, 448, 448, 'bottom_right');
-		} else {
-			add_anchor(child_group, 10, 10, 'top_left');
-			add_anchor(child_group, 405, 10, 'top_right');
-			add_anchor(child_group, 10, 510, 'bottom_left');
-			add_anchor(child_group, 405, 510, 'bottom_right');
-		}
+		add_anchor(child_group, 10, 10, 'top_left');
+		add_anchor(child_group, image_obj.width+10, 10, 'top_right');
+		add_anchor(child_group, 10, image_obj.height+10, 'bottom_left');
+		add_anchor(child_group, image_obj.width+10, image_obj.height+10, 'bottom_right');
 
 		child_group.on('mouseover', function() {
 			if (drag_mode && !freeze_mode) {
@@ -335,20 +328,26 @@ $(document).ready(function() {
 		paint_stop(e);
 	}
 
-	add_image.onclick = function () {
-		var image_obj = new Image();
-		if (img_idx == 0) {
-			image_obj.src = "assets/idoh.jpeg";
-		} else {
-			image_obj.src = "assets/cat-thinking.jpg";
+	$("#fileuploader").fileupload({
+		url:'/canvas/upload',
+		dataType:'json',
+		done:function(e, data) {
+			var response = data.result
+			if (response.status == "success") {
+				var image_obj = new Image();
+				image_obj.src = "http://localhost:3000" + response.filepath;
+
+				image_obj.onload = function() {
+					draw_image(this);
+				}
+			} else {
+				// show alert with bootstrap
+			}
+		},
+		progressall:function(e,data) {
+
 		}
-
-		image_obj.onload = function() {
-			draw_image(this);
-		};
-
-		imaged = true;
-	};
+	});
 
 	remove_image.onclick = function() {
 		if (freeze_mode) {

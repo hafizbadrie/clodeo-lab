@@ -3,6 +3,7 @@ ClodeoLab::Application.routes.draw do
   get "canvas", controller: "canvas", action: "index"
   post "canvas/base64image"
   post "canvas/getimage"
+  post "canvas/upload"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
