@@ -1,4 +1,5 @@
 var url = "http://192.168.1.104:3001/sock";
+var domain = "http://localhost:3000";
 var sockjs = new SockJS(url);
 var connid = "";
 
@@ -335,10 +336,12 @@ $(function() {
 			var response = data.result
 			if (response.status == "success") {
 				var image_obj = new Image();
-				image_obj.src = "http://localhost:3000" + response.filepath;
+				var image_path = domain + response.filepath;
+				image_obj.src = image_path;
 
 				image_obj.onload = function() {
 					draw_image(this);
+					sockjs.send(JSON.stringify({path:image_path, type:"image"}));
 				}
 			} else {
 				// show alert with bootstrap
@@ -546,6 +549,13 @@ $(function() {
 					people_points.push({x:message.x, y:message.y});
 					line.setPoints(people_points);
 					stage.draw();
+				}
+			} else if (message.type == "image") {
+				var image_obj = new Image();
+				image_obj.src = message.path;
+
+				image_obj.onload = function() {
+					draw_image(this);
 				}
 			} else if (message.type == "chat") {
 				var fullname = message.fullname;
