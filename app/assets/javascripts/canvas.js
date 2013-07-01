@@ -407,9 +407,6 @@ $(function() {
 	save_canvas.onclick = function() {
 		stage.toDataURL({
 			callback:function(data_uri) {
-				//window.open(data_uri);
-
-				console.log(data_uri);
 				$.ajax({
 					type:"POST",
 					url:"/canvas/base64image",

@@ -4,6 +4,7 @@
   <title>ClodeoLab</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= csrf_meta_tags %>
+  <%= yield :jscript_head %>
 </head>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top">
@@ -19,6 +20,9 @@
           <ul class="nav">
             <li class="active">
               <a href="<%= canvas_path %>">Canvas</a>
+            </li>
+            <li>
+              <a href="<%= video_path %>">Video</a>
             </li>
           </ul>
         </div>
