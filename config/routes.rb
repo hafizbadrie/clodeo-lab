@@ -1,5 +1,7 @@
 ClodeoLab::Application.routes.draw do
 
+  devise_for :users
+
   root to: "canvas#index"
   get "canvas", controller: "canvas", action: "index"
   post "canvas/base64image"

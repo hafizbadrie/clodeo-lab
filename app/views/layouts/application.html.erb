@@ -16,12 +16,13 @@
           <span class="icon-bar"></span>
         </button>
         <a class="brand" href="/">Clodeo Lab</a>
+
         <div class="nav-collapse collapse">
           <ul class="nav">
-            <li class="active">
+            <li <%= (params[:controller] == "canvas") ? "class=active" : "" %>>
               <a href="<%= canvas_path %>">Canvas</a>
             </li>
-            <li>
+            <li <%= (params[:controller] == "video") ? "class=active" : "" %>>
               <a href="<%= video_path %>">Video</a>
             </li>
           </ul>

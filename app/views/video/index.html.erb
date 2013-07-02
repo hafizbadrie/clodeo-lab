@@ -2,58 +2,79 @@
 	<%= javascript_include_tag "https://swww.tokbox.com/webrtc/v2.0/js/TB.min.js" %>
 <% end %>
 
+<div class="space"></div>
+<div class="row">
+	<div class="span12 intro-speech">
+		This room is limited only for 5 people and you have to use Google Chrome to utilize this feature. Please share this link to perform a video conference.
+		<input type="text" id="url-field" value="http://localhost:3000/video?sessionId=2_MX4zMzQ1NjQ1Mn4xMjcuMC4wLjF-U3VuIEp1biAzMCAyMDoxMzoyMyBQRFQgMjAxM34wLjc0OTQ2M34" readonly/>
+	</div>
+</div>
+<div class="space"></div>
 <div class="row">
 	<div class="span12" id="video-container">
 		<div id="myPublisherDiv"></div>
 		<script type="text/javascript">
-			// Initialize API key, session, and token...
-			// Think of a session as a room, and a token as the key to get in to the room
-			// Sessions and tokens are generated on your server and passed down to the client
-			var apiKey = "33456452";
-			var sessionId = "2_MX4zMzQ1NjQ1Mn4xMjcuMC4wLjF-U3VuIEp1biAzMCAyMDoxMzoyMyBQRFQgMjAxM34wLjc0OTQ2M34";
-			var token = "T1==cGFydG5lcl9pZD0zMzQ1NjQ1MiZzZGtfdmVyc2lvbj10YnJ1YnktdGJyYi12MC45MS4yMDExLTAyLTE3JnNpZz0yNDA0OWU2MGNiMTQ0Y2VmNjI5MWEyY2NiOGNjZDcwZTM4Yzg2YjIyOnJvbGU9cHVibGlzaGVyJnNlc3Npb25faWQ9Ml9NWDR6TXpRMU5qUTFNbjR4TWpjdU1DNHdMakYtVTNWdUlFcDFiaUF6TUNBeU1Eb3hNem95TXlCUVJGUWdNakF4TTM0d0xqYzBPVFEyTTM0JmNyZWF0ZV90aW1lPTEzNzI2NDg0MjAmbm9uY2U9MC45NjA0NzYwMzE1NDg4Mzk1JmV4cGlyZV90aW1lPTEzNzUyNDA0MjgmY29ubmVjdGlvbl9kYXRhPQ==";
+			var user_agent = navigator.userAgent;
 
-			// Initialize session, set up event listeners, and connect
-			var session = TB.initSession(sessionId);
-			session.addEventListener('sessionConnected', sessionConnectedHandler);
-			session.addEventListener('streamCreated', streamCreatedHandler);
-			session.connect(apiKey, token);
+			if (user_agent.indexOf("Chrome") != -1) {
+				// Initialize API key, session, and token...
+				// Think of a session as a room, and a token as the key to get in to the room
+				// Sessions and tokens are generated on your server and passed down to the client
+				var apiKey = "33456452";
+				var sessionId = "2_MX4zMzQ1NjQ1Mn4xMjcuMC4wLjF-U3VuIEp1biAzMCAyMDoxMzoyMyBQRFQgMjAxM34wLjc0OTQ2M34";
+				var token = "T1==cGFydG5lcl9pZD0zMzQ1NjQ1MiZzZGtfdmVyc2lvbj10YnJ1YnktdGJyYi12MC45MS4yMDExLTAyLTE3JnNpZz0yNDA0OWU2MGNiMTQ0Y2VmNjI5MWEyY2NiOGNjZDcwZTM4Yzg2YjIyOnJvbGU9cHVibGlzaGVyJnNlc3Npb25faWQ9Ml9NWDR6TXpRMU5qUTFNbjR4TWpjdU1DNHdMakYtVTNWdUlFcDFiaUF6TUNBeU1Eb3hNem95TXlCUVJGUWdNakF4TTM0d0xqYzBPVFEyTTM0JmNyZWF0ZV90aW1lPTEzNzI2NDg0MjAmbm9uY2U9MC45NjA0NzYwMzE1NDg4Mzk1JmV4cGlyZV90aW1lPTEzNzUyNDA0MjgmY29ubmVjdGlvbl9kYXRhPQ==";
 
-			function sessionConnectedHandler(event) {
-				for (var i=0; i<event.streams.length; i++) {
-					var stream = event.streams[i];
-					// Create the div to put the subscriber element in to
-					var container = document.getElementById("video-container");
-				    var div = document.createElement('div');
-				    div.setAttribute('id', 'stream' + stream.streamId);
-				    container.appendChild(div);
+				// Initialize session, set up event listeners, and connect
+				var session = TB.initSession(sessionId);
+				session.addEventListener('sessionConnected', sessionConnectedHandler);
+				session.addEventListener('streamCreated', streamCreatedHandler);
+				session.connect(apiKey, token);
 
-					session.subscribe(stream, div.id);
-				}
+				function sessionConnectedHandler(event) {
+					if (event.streams.length <= 5) {
+						for (var i=0; i<event.streams.length; i++) {
+							var stream = event.streams[i];
+							// Create the div to put the subscriber element in to
+							var container = document.getElementById("video-container");
+						    var div = document.createElement('div');
+						    div.setAttribute('id', 'stream' + stream.streamId);
+						    container.appendChild(div);
 
-				var publisher = TB.initPublisher(apiKey, 'myPublisherDiv');
-				session.publish(publisher);
-			}
+							session.subscribe(stream, div.id);
+						}
 
-			function streamCreatedHandler(event) {
-				subscribeToStreams(event.streams);
-			}
-
-			function subscribeToStreams(streams) {
-				for (var i=0; i<streams.length; i++) {
-					var stream = streams[i];
-					if (stream.connection.connectionId == session.connection.connectionId) {
-						return;
+						var publisher = TB.initPublisher(apiKey, 'myPublisherDiv');
+						session.publish(publisher);
+					} else {
+						alert("You already reached maximum audience for this room.");
 					}
-
-					// Create the div to put the subscriber element in to
-					var container = document.getElementById("video-container");
-				    var div = document.createElement('div');
-				    div.setAttribute('id', 'stream' + stream.streamId);
-				    container.appendChild(div);
-
-					session.subscribe(stream, div.id);
 				}
+
+				function streamCreatedHandler(event) {
+					subscribeToStreams(event.streams);
+				}
+
+				function subscribeToStreams(streams) {
+					for (var i=0; i<streams.length; i++) {
+						var stream = streams[i];
+						if (stream.connection.connectionId == session.connection.connectionId) {
+							return;
+						}
+
+						// Create the div to put the subscriber element in to
+						var container = document.getElementById("video-container");
+					    var div = document.createElement('div');
+					    div.setAttribute('id', 'stream' + stream.streamId);
+					    div.style.float = "left";
+					    div.style.margin_right = '10px';
+					    div.style.margin_bottom = '10px';
+					    container.appendChild(div);
+
+						session.subscribe(stream, div.id);
+					}
+				}
+			} else {
+				alert("Please use Google Chrome browser to utilize this feature.");
 			}
 		</script>
 	</div>
