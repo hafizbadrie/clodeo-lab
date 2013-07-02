@@ -1,23 +1,60 @@
 <% content_for :jscript_head do %>
-	<%= javascript_include_tag "https://swww.tokbox.com/v1.1/js/TB.min.js" %>
+	<%= javascript_include_tag "https://swww.tokbox.com/webrtc/v2.0/js/TB.min.js" %>
 <% end %>
 
-<div id="myPublisherDiv"></div>
-<script type="text/javascript">
-	// Initialize API key, session, and token...
-	// Think of a session as a room, and a token as the key to get in to the room
-	// Sessions and tokens are generated on your server and passed down to the client
-	var apiKey = "33456452";
-	var sessionId = "1_MX4zMzQ1NjQ1Mn4xMjcuMC4wLjF-U3VuIEp1biAzMCAyMDowMDo1MyBQRFQgMjAxM34wLjc4NDYxMjl-";
-	var token = "T1==cGFydG5lcl9pZD0zMzQ1NjQ1MiZzZGtfdmVyc2lvbj10YnJ1YnktdGJyYi12MC45MS4yMDExLTAyLTE3JnNpZz1lZWM0NGUzZTdiOTBjMDViNWNiOTFmYzhlN2NlYTk1MjQ4NzMwOTQ0OnJvbGU9cHVibGlzaGVyJnNlc3Npb25faWQ9MV9NWDR6TXpRMU5qUTFNbjR4TWpjdU1DNHdMakYtVTNWdUlFcDFiaUF6TUNBeU1Eb3dNRG8xTXlCUVJGUWdNakF4TTM0d0xqYzRORFl4TWpsLSZjcmVhdGVfdGltZT0xMzcyNjQ3NjcyJm5vbmNlPTAuMzY3MTY0NTQ0NDcxNTczJmV4cGlyZV90aW1lPTEzNzUyMzk2NzkmY29ubmVjdGlvbl9kYXRhPQ==";
+<div class="row">
+	<div class="span12" id="video-container">
+		<div id="myPublisherDiv"></div>
+		<script type="text/javascript">
+			// Initialize API key, session, and token...
+			// Think of a session as a room, and a token as the key to get in to the room
+			// Sessions and tokens are generated on your server and passed down to the client
+			var apiKey = "33456452";
+			var sessionId = "2_MX4zMzQ1NjQ1Mn4xMjcuMC4wLjF-U3VuIEp1biAzMCAyMDoxMzoyMyBQRFQgMjAxM34wLjc0OTQ2M34";
+			var token = "T1==cGFydG5lcl9pZD0zMzQ1NjQ1MiZzZGtfdmVyc2lvbj10YnJ1YnktdGJyYi12MC45MS4yMDExLTAyLTE3JnNpZz0yNDA0OWU2MGNiMTQ0Y2VmNjI5MWEyY2NiOGNjZDcwZTM4Yzg2YjIyOnJvbGU9cHVibGlzaGVyJnNlc3Npb25faWQ9Ml9NWDR6TXpRMU5qUTFNbjR4TWpjdU1DNHdMakYtVTNWdUlFcDFiaUF6TUNBeU1Eb3hNem95TXlCUVJGUWdNakF4TTM0d0xqYzBPVFEyTTM0JmNyZWF0ZV90aW1lPTEzNzI2NDg0MjAmbm9uY2U9MC45NjA0NzYwMzE1NDg4Mzk1JmV4cGlyZV90aW1lPTEzNzUyNDA0MjgmY29ubmVjdGlvbl9kYXRhPQ==";
 
-	// Initialize session, set up event listeners, and connect
-	var session = TB.initSession(sessionId);
-	session.addEventListener('sessionConnected', sessionConnectedHandler);
-	session.connect(apiKey, token);
+			// Initialize session, set up event listeners, and connect
+			var session = TB.initSession(sessionId);
+			session.addEventListener('sessionConnected', sessionConnectedHandler);
+			session.addEventListener('streamCreated', streamCreatedHandler);
+			session.connect(apiKey, token);
 
-	function sessionConnectedHandler(event) {
-		var publisher = TB.initPublisher(apiKey, 'myPublisherDiv');
-		session.publish(publisher);
-	}
-</script>
+			function sessionConnectedHandler(event) {
+				for (var i=0; i<event.streams.length; i++) {
+					var stream = event.streams[i];
+					// Create the div to put the subscriber element in to
+					var container = document.getElementById("video-container");
+				    var div = document.createElement('div');
+				    div.setAttribute('id', 'stream' + stream.streamId);
+				    container.appendChild(div);
+
+					session.subscribe(stream, div.id);
+				}
+
+				var publisher = TB.initPublisher(apiKey, 'myPublisherDiv');
+				session.publish(publisher);
+			}
+
+			function streamCreatedHandler(event) {
+				subscribeToStreams(event.streams);
+			}
+
+			function subscribeToStreams(streams) {
+				for (var i=0; i<streams.length; i++) {
+					var stream = streams[i];
+					if (stream.connection.connectionId == session.connection.connectionId) {
+						return;
+					}
+
+					// Create the div to put the subscriber element in to
+					var container = document.getElementById("video-container");
+				    var div = document.createElement('div');
+				    div.setAttribute('id', 'stream' + stream.streamId);
+				    container.appendChild(div);
+
+					session.subscribe(stream, div.id);
+				}
+			}
+		</script>
+	</div>
+</div>
