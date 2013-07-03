@@ -1,3 +1,7 @@
+<% content_for :stylesheet do %>
+	<%= stylesheet_link_tag "video", :media => "all" %>
+<% end %>
+
 <% content_for :jscript_head do %>
 	<%= javascript_include_tag "https://swww.tokbox.com/webrtc/v2.0/js/TB.min.js" %>
 <% end %>

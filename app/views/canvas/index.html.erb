@@ -1,3 +1,7 @@
+<% content_for :stylesheet do %>
+	<%= stylesheet_link_tag "jquery.fileupload-ui", "canvas", :media => "all" %>
+<% end %>
+
 <% content_for :jscript do %>
 	<%= javascript_include_tag "vendor/sockjs.min", "vendor/kinetic.min", "vendor/jquery.ui.widget", "vendor/jquery.iframe-transport", "vendor/jquery.fileupload", "canvas" %>
 <% end %>
