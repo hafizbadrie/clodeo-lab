@@ -363,6 +363,7 @@ $(function() {
 	remove_image.onclick = function() {
 		if (freeze_mode) {
 			temp_group.destroy();
+			sockjs.send(JSON.stringify({name:temp_group.getName(), type:"image_remove"}));
 			layer.draw();
 			freeze_mode = false;
 		}
@@ -405,6 +406,7 @@ $(function() {
 	}
 
 	clear_canvas.onclick = function() {
+		sockjs.send(JSON.stringify({type:"clear"}));
 		layer.destroy();
 		stage.clear();
 		init_variable();
@@ -561,6 +563,24 @@ $(function() {
 				image_obj.onload = function() {
 					draw_image(this, message.name);
 				}
+			} else if (message.type == "image_remove") {
+				var layers = stage.getChildren();
+				var groups = layers[0].getChildren();
+				var children = groups[0].getChildren();
+				var found = false;
+				var idx = 0;
+
+				while (!found && idx < children.length) {
+					if (children[idx].getName() == message.name) {
+						found = true;
+					} else {
+						idx++;
+					}
+				}
+
+				var group = children[idx];
+				group.destroy();
+				stage.draw();
 			} else if (message.type == "chat") {
 				var fullname = message.fullname;
 				var message = message.message;
@@ -584,6 +604,12 @@ $(function() {
 				var group = children[idx];
 				group.setPosition(message.x, message.y);
 				stage.draw();
+			} else if (message.type == "clear") {
+				layer.destroy();
+				stage.clear();
+				init_variable();
+				init();
+				activities = [];
 			}
 		}
 	}
