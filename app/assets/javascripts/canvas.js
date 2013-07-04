@@ -1,4 +1,4 @@
-var url = "http://192.168.1.104:3001/sock";
+var url = "http://localhost:3001/sock";
 var domain = "http://localhost:3000";
 var sockjs = new SockJS(url);
 var connid = "";
@@ -17,6 +17,7 @@ $(function() {
 	var record_canvas = document.getElementById("record-canvas");
 	var load_canvas = document.getElementById("load-canvas");
 	var send_message= document.getElementById("send-message");
+	var set_pos = document.getElementById("set-image-pos");
 	var imaged, paint_mode, drag_mode, erase_mode, freeze_mode;
 	var stage = new Kinetic.Stage({
 		container:"paint-canvas",
@@ -123,7 +124,6 @@ $(function() {
 			child_group.setDraggable(true);
 			layer.draw();
 	    });
-	    // add hover styling
 	    anchor.on('mouseover', function() {
 			var layer = this.getLayer();
 			document.body.style.cursor = 'pointer';
@@ -140,11 +140,12 @@ $(function() {
 	    child_group.add(anchor);
 	}
 
-	function draw_image(image_obj) {
+	function draw_image(image_obj, group_name) {
 		var layers = stage.getChildren();
 		var groups = layers[0].getChildren();
 		var child_group = new Kinetic.Group({
-			draggable:drag_mode
+			draggable:drag_mode,
+			name:group_name
 		})
 		groups[0].add(child_group);
 
@@ -154,6 +155,7 @@ $(function() {
 			y: 10,
 			name:'image'
 		});
+
 		child_group.add(image);
 
 		add_anchor(child_group, 10, 10, 'top_left');
@@ -207,6 +209,11 @@ $(function() {
 					layer.draw();
 				}
 			}
+		})
+
+		child_group.on('dragend', function() {
+			var points = this.getPosition();
+			sockjs.send(JSON.stringify({name:this.getName(), x:points.x, y:points.y, type:"drag"}));
 		})
 
 		img_idx++;
@@ -337,11 +344,12 @@ $(function() {
 			if (response.status == "success") {
 				var image_obj = new Image();
 				var image_path = domain + response.filepath;
+				var group_name = "group_" + connid + "_" + Date.now();
 				image_obj.src = image_path;
 
 				image_obj.onload = function() {
-					draw_image(this);
-					sockjs.send(JSON.stringify({path:image_path, type:"image"}));
+					draw_image(this, group_name);
+					sockjs.send(JSON.stringify({name:group_name, path:image_path, type:"image"}));
 				}
 			} else {
 				// show alert with bootstrap
@@ -507,7 +515,6 @@ $(function() {
 		var obj = JSON.parse(e.data);
 
 		if (obj.status == "connect") {
-			console.log(obj.id);
 			connid = obj.id;
 		} else if (obj.status == "data") {
 			var message = JSON.parse(obj.text);
@@ -552,13 +559,31 @@ $(function() {
 				image_obj.src = message.path;
 
 				image_obj.onload = function() {
-					draw_image(this);
+					draw_image(this, message.name);
 				}
 			} else if (message.type == "chat") {
 				var fullname = message.fullname;
 				var message = message.message;
 
 				print_message(fullname, message);
+			} else if (message.type == "drag") {
+				var layers = stage.getChildren();
+				var groups = layers[0].getChildren();
+				var children = groups[0].getChildren();
+				var found = false;
+				var idx = 0;
+
+				while (!found && idx < children.length) {
+					if (children[idx].getName() == message.name) {
+						found = true;
+					} else {
+						idx++;
+					}
+				}
+
+				var group = children[idx];
+				group.setPosition(message.x, message.y);
+				stage.draw();
 			}
 		}
 	}
