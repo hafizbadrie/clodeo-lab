@@ -307,7 +307,7 @@ $(function() {
 					activity:activity,
 					points:points,
 					color:color,
-					width:8
+					width:width
 				}
 				activities.push(savecard);
 				points = [];
@@ -405,13 +405,20 @@ $(function() {
 		drag_mode = false;
 	}
 
-	clear_canvas.onclick = function() {
+	var clear_board = function(is_remove_activities) {
 		sockjs.send(JSON.stringify({type:"clear"}));
 		layer.destroy();
 		stage.clear();
 		init_variable();
 		init();
-		activities = [];
+
+		if (is_remove_activities) {
+			activities = [];
+		}
+	}
+
+	clear_canvas.onclick = function() {
+		clear_board(true);
 	};
 
 	save_canvas.onclick = function() {
@@ -485,7 +492,7 @@ $(function() {
 	load_canvas.onclick = function() {
 		if (memcard != undefined) {
 			activities = JSON.parse(memcard);
-			clear_canvas.onclick();
+			clear_board(false);
 
 			for(i=0; i<activities.length; i++) {
 				var activity = activities[i];
